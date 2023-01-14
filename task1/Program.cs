@@ -9,11 +9,20 @@ int b = Convert.ToInt32(number);
 String number1 = Console.ReadLine() ?? "";
 int c = Convert.ToInt32(number1);
 
-int max = b;
-int min = c;
+int max = 0;
+int min = 0;
 
-if (b > c) max = b; min = c;
-if (c > b) max = c; min = b;
+if(b > c)
+{
+    max = b;
+    min = c;
+}
+else
+{
+    max = c;
+    min = b;
+}
+
 
 Console.Write("max = ");
 Console.WriteLine(max);
